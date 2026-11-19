@@ -1,86 +1,71 @@
-Week 3 Database Assignment: SQL Data Manipulation
-Assignment Overview
+# Week 3 Database Assignment
 
-This assignment focuses on fundamental SQL database management operations using MySQL.
+## Introduction
+This assignment is about learning basic SQL commands. I used the `sales` database to create a student table, add student records, and update student information.
 
-During this week, I learned how to create database tables, insert records, and update existing data using SQL statements.
+## Question 1: Create a Student Table
 
-The assignment uses the sales database and introduces practical data manipulation techniques.
-
-Database Information
-Database Name: sales
-DBMS: MySQL
-Table Created: student
-Language: SQL
-Assignment Questions and Solutions
-Question 1: Create a Student Table
-
-Objective: Create a table named student with the following columns:
-
-id: Integer and primary key.
-fullName: Text field with a maximum of 100 characters.
-age: Integer.
-
-SQL Query:
-
-sql
+```sql
 CREATE TABLE student (
     id INT PRIMARY KEY,
     fullName VARCHAR(100),
     age INT
 );
+```
 
+This command creates a table called `student` with three columns: ID, full name, and age.
 
-Explanation:
+## Question 2: Insert Three Students
 
-CREATE TABLE creates a new table.
-INT stores integer values.
-PRIMARY KEY uniquely identifies each student.
-VARCHAR(100) stores text up to 100 characters.
-Question 2: Insert at Least Three Records
-
-Objective: Insert three student records into the student table.
-
-SQL Query:
-
-sql
+```sql
 INSERT INTO student (id, fullName, age)
 VALUES
-(1, 'John Doe', 19),
-(2, 'Mary Smith', 21),
-(3, 'Peter James', 22);
+(1, 'John Peter', 18),
+(2, 'Mary James', 19),
+(3, 'David Mark', 21);
+```
 
+This command adds three students to the table.
 
-Explanation:
+## Question 3: Update Student Age
 
-INSERT INTO adds new records to the table.
-VALUES specifies the data to be inserted.
-Three student records are added to the database.
-
-To display the inserted records:
-
-sql
-SELECT * FROM student;
-
-Question 3: Update the Age of a Student
-
-Objective: Update the age of the student with ID 2 to 20.
-
-SQL Query:
-
-sql
+```sql
 UPDATE student
 SET age = 20
 WHERE id = 2;
+```
 
+This command changes the age of the student with ID 2 from 19 to 20.
 
-Explanation:
+## Check the Results
 
-UPDATE modifies existing records.
-SET specifies the new value.
-WHERE id = 2 identifies the student whose age should be updated.
-
-To verify the update:
-
-sql
+```sql
 SELECT * FROM student;
+```
+
+| ID | Full Name | Age |
+|---|---|---|
+| 1 | John Peter | 18 |
+| 2 | Mary James | 20 |
+| 3 | David Mark | 21 |
+
+## What I Learned
+
+In this assignment, I learned how to:
+
+1. Create a table using SQL.
+2. Insert student records into a table.
+3. Update information in a table.
+4. Display records using SELECT.
+
+## Conclusion
+
+This assignment helped me understand how to use SQL to manage data in a database. I also improved my skills in creating tables, adding records, and updating information.
+
+## Student Information
+
+**Name:** ORESTE ODONGE COMPEO
+
+**Program:** Power Learn Project (PLP)
+
+**Assignment:** Week 3 Database Assignment
